@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>Tic-Tac-Toe</h1>
+    </header>
+
+    <form id = "overlay"></div>
+        <div id="inputs">
+        <select id = "game-type" onchange = "hide('hide-on-select', this)">
+            <option value = "1">Multi-player</option>
+            <option value = "0">Single-player</option>
+        </select>
+        <br>
+        <br>
+        <input id = "nameX" placeholder = "Player X Name">
+        <br>
+        <br>
+        <div id = "hide-on-select">
+            <input id = "nameO" placeholder = "Player O Name">
+        </div>
+        <br>
+        <input type = "button" value = "PLAY" onclick = "off(), displayNames()" id = "play">
+        </div>
+    </form>
+    
+    <div class = "player-names">
+        <div class = "names">
+            <h2>Player X</h2>
+            <ol id = "player-X"></ol>
+            <li id = x-tallies></li>
+        </div>
+        <div class = "names">
+            <h2>Player O</h2>
+            <ol id = "player-O"></ol>
+            <li id = o-tallies></li>
+        </div>
+    </div>
+
+    <p id="display-winner"></p>
+    <p id = "turn"></p>
+
+    <div id = "game">
+        <p id = "winner"></p>
+        <div class = "game-board">
+            <div id = "box-0" class = "box"></div>
+            <div id = "box-1" class = "box"></div>
+            <div id = "box-2" class = "box"></div>
+            <div id = "box-3" class = "box"></div>
+            <div id = "box-4" class = "box"></div>
+            <div id = "box-5" class = "box"></div>
+            <div id = "box-6" class = "box"></div>
+            <div id = "box-7" class = "box"></div>
+            <div id = "box-8" class = "box"></div>
+        </div>
+
+        <div id = "buttons">
+            <input type = "button" onclick = "on()" value = "Go back">
+            <button id = "replay-btn">Replay</button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "Neon Sans";
+    src: url('/NeonSans.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Neon Sans";
+}
+
+#game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 0px;
+}
+
+body{
+    color: #2b282e;
+    background-color: #6D6875;
+    position: relative;
+    margin: auto;
+}
+
+#overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#inputs{
+    padding-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    margin-top: 0px;
+    text-align: center;
+    color: white;
+    font-family: "Neon Sans";
+    font-size: 60px;
+}
+
+h1{
+    margin-top: 0px;
+    font-size: 70px;
+}
+
+.names{
+    display: flex;
+    flex-direction: column;
+}
+
+.player-names{
+    display: flex;
+    justify-content: space-around;
+    font-family: "Neon Sans";
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#player-X, #player-O{
+    color: white;
+    font-size: 30px;
+    /* font-family: sans-serif; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: static;
+    text-align: center;
+}
+
+.tallies{
+    position: absolute;
+}
+
+#hide-on-select{
+    display: block;
+}
+
+.game-board{
+    background-image: radial-gradient(#FFCDB2, #FFB4A2, #E5989B, #6D6875);
+    display: grid;
+    width: 450px;
+    height: 450px;
+    grid-template-columns: auto auto auto;
+    margin-top: 2px;
+    margin-bottom: 50px;
+}
+
+.box{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #6D6875;
+    color: white;
+    font-size: 8em;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+#box-0,
+#box-1,
+#box-2 {
+  border-top: none;
+}
+
+#box-0,
+#box-3,
+#box-6 {
+  border-left: none;
+}
+
+#box-6,
+#box-7,
+#box-8 {
+  border-bottom: none;
+}
+
+#box-2,
+#box-5,
+#box-8 {
+  border-right: none;
+}
+
+.box:hover {
+    cursor: crosshair;
+}
+
+#display-winner{
+    margin-top: 0px;
+    text-align: center;
+    font-size: 35px;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    margin-bottom: 0px;
+}
+
+#turn{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 35px;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+header{
+    background: linear-gradient(#FFCDB2, #6D6875);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+ol {
+    height: 20px;
+    padding: 1em 0;
+}
+
+li{
+    display: inline-block;
+    height: 20px;
+    margin-right: 4px;
+}
+
+#buttons{
+    margin-bottom: 10px;
+}
